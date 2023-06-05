@@ -1,0 +1,19 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "percy exec -- cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@percy/cypress": "^3.1.2",
+    "cypress": "^12.13.0",
+    "dotenv": "^16.1.4",
+    "@percy/cli": "^1.25.0"
+  }
+}
