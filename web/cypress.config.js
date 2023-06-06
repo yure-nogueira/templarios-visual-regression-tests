@@ -1,4 +1,5 @@
 const { defineConfig } = require('cypress');
+// import './node_modules/electron/dist/electron';
 
 module.exports = defineConfig({
   video: false,
