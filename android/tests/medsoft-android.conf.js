@@ -5,7 +5,7 @@ exports.config = {
   key: process.env.BROWSERSTACK_ACCESS_KEY,
 
   updateJob: false,
-  specs: ['./tests/specs/**.js'],
+  specs: ['./specs/**.js'],
   exclude: [],
 
   maxInstances: 10,
@@ -14,14 +14,16 @@ exports.config = {
     build: 'Medsoft Android',
     name: 'Medsoft Android Version',
     app: process.env.BROWSERSTACK_APP_ID,
-    'browserstack.debug': true
+    'browserstack.debug': true,
+    autoGrantPermissions: true,
+    automationName: 'UiAutomator2'
   },
 
   capabilities: [
-    {
-      device: 'Google Pixel 3',
-      os_version: '9.0'
-    },
+    // {
+    //   device: 'Google Pixel 3',
+    //   os_version: '9.0'
+    // },
     {
       device: 'Samsung Galaxy S10e',
       os_version: '9.0'

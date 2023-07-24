@@ -4,11 +4,11 @@ const FormData = require('form-data');
 require('dotenv').config();
 
 const appFile = fs.createReadStream(
-  `${process.cwd()}/apk/${process.env.APK_NAME}`
+  `${process.cwd()}/apk/${process.env.APP_FILE_NAME}`
 );
 
 const formData = new FormData();
-formData.append('file', appFile, 'app-debug.apk');
+formData.append('file', appFile, process.env.APP_FILE_NAME);
 
 axios({
   url: 'https://api-cloud.browserstack.com/app-automate/upload',
